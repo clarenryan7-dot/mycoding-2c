@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine's Day My Love💚</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+overflow:hidden;
+background:linear-gradient(135deg,#f83339,#fb4949,#ff758c,#ff7eb3);
+background-size:400% 400%;
+animation:gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Floating Hearts */
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:0;
+pointer-events:none;
+overflow:hidden;
+}
+
+.hearts span{
+position:absolute;
+width:18px;
+height:18px;
+background:rgba(255,0,100,0.7);
+transform:rotate(45deg);
+animation:floatUp 8s linear infinite;
+}
+
+.hearts span::before,
+.hearts span::after{
+content:'';
+position:absolute;
+width:18px;
+height:18px;
+background:inherit;
+border-radius:50%;
+}
+
+.hearts span::before{top:-9px;left:0;}
+.hearts span::after{left:-9px;top:0;}
+
+@keyframes floatUp{
+0%{transform:translateY(100vh) rotate(45deg);opacity:1;}
+100%{transform:translateY(-10vh) rotate(45deg);opacity:0;}
+}
+
+.page{
+width:100vw;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+position:absolute;
+top:0;
+left:100%;
+transition:0.8s ease;
+padding:30px 20px;
+z-index:1;
+}
+
+.active{left:0;}
+
+h1{
+font-family:'Pacifico',cursive;
+font-size:3.2rem;
+color:#ff3d3d;
+text-shadow:0 0 20px #ff4d6d;
+animation:glow 2s infinite alternate;
+text-align:center;
+margin-bottom:20px;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px #fbecec;}
+to{text-shadow:0 0 30px #ff4d6d,0 0 50px #ff1e56;}
+}
+
+button{
+padding:10px 25px;
+border:none;
+border-radius:30px;
+background:#ff4d6d;
+color:#fff;
+font-size:0.95rem;
+cursor:pointer;
+margin-top:25px;
+transition:.3s;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:hover{
+transform:scale(1.1);
+background:#ff1e56;
+}
+
+/* SECOND PAGE SMALLER & TOP ALIGNED */
+#page2{
+overflow-y:auto;
+justify-content:flex-start;   /* Start from top */
+padding-top:40px;             /* Smaller spacing */
+padding-bottom:60px;
+}
+
+/* Gallery */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+width:100%;
+max-width:1000px;
+margin-top:20px;
+}
+
+.photo-card{
+background:rgba(255,255,255,0.25);
+backdrop-filter:blur(10px);
+border-radius:18px;
+padding:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+transition:.3s;
+}
+
+.photo-card:hover{
+transform:translateY(-6px) scale(1.02);
+}
+
+.photo-card img{
+width:100%;
+height:180px;   /* Smaller image height */
+object-fit:cover;
+border-radius:12px;
+}
+
+.note{
+margin-top:8px;
+color:#191818;
+font-size:0.9rem;
+text-align:center;
+}
+
+.card{
+width:100%;
+max-width:480px;
+background:#f8eeee;
+border-radius:20px;
+padding:25px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+animation:floatCard 3s ease-in-out infinite;
+}
+
+@keyframes floatCard{
+0%,100%{transform:translateY(0);} 
+50%{transform:translateY(-12px);} 
+}
+
+.card h2{
+color:#ff4d6d;
+font-family:'Pacifico',cursive;
+margin-bottom:15px;
+font-size:1.8rem;
+}
+
+.card p{
+color:#555;
+font-size:0.95rem;
+line-height:1.6;
+}
+
+</style>
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<div class="page active" id="page1">
+<h1>Happy Valentine's Day My Love💚</h1>
+<button onclick="showPage(2)">Press Me Qyssiee💙💙</button>
+</div>
+
+<div class="page" id="page2">
+<h1>Happy 1 Year and 4 Month💙💚</h1>
+<div class="gallery">
+
+<div class="photo-card"><img src="2nd.jpeg"><div class="note">Our meet up at JSL and our Valentines Gift 💙💚</div></div>
+<div class="photo-card"><img src="3rd.jpeg"><div class="note">Far from a sight yet close in our hearts 💙💚</div></div>
+<div class="photo-card"><img src="4th.jpeg"><div class="note">Us playing 99 nights 😱</div></div>
+<div class="photo-card"><img src="5th.jpeg"><div class="note">CONGRATES 5 A 🤩🎉</div></div>
+<div class="photo-card"><img src="6th.jpeg"><div class="note">Our matching bracelets 💚💙</div></div>
+<div class="photo-card"><img src="7th.jpeg"><div class="note">Moments before disaster 💀</div></div>
+<div class="photo-card"><img src="12th.jpeg"><div class="note">KM DATEEE LOOK AT US 😍😍</div></div>
+<div class="photo-card"><img src="9th.jpeg"><div class="note">Look at My Cashier 😙</div></div>
+<div class="photo-card"><img src="13th.jpeg"><div class="note">Look at my foodss 😋😋 YESS YOU HEARD ITT RIGHTT, ALL MINEE</div></div>
+<div class="photo-card"><img src="16th.jpeg"><div class="note">COINCIDENCE?? NOOO!!!! IT'S FAITH MWAHAHAHA 🔥🔥</div></div>
+<div class="photo-card"><img src="14th.jpeg"><div class="note">"Look it's the Nubies again"😒</div></div>
+<div class="photo-card"><img src="8th.jpeg"><div class="note">Can we go home now 💚💙</div></div>
+     
+
+<div  class="note"> In every laught,in every tears</div>
+<div  class="note"> I found a love soo pure,soo sincere</div>
+<div  class="note"> Your hands in mine just feels right</div>
+<div  class="note"> Like days was made to follow the night</div>
+    
+
+</div>
+<button onclick="showPage(3)">Next 💌</button>
+</div>
+     
+<div class="page" id="page3">
+<div class="card">
+<h2>My Wish For You</h2>
+<p>
+Happy Valentine's My Love💚<br><br>
+To The Love Of My Life,
+
+
+Happy Valentine's Day My Lovee💚💚 
+And Happy 1 Year and 4 Month💙💚
+It has been a life changing experience being with you My Love, 
+Times has past by soo fast and I can't believe you're still here with me💙
+Who would've though it be us out of anyone?
+I'm glad it got to be you💚
+I wouldn't want it to be anyone else nor would I want to start a new one,
+You're perfect🤍
+There's a saying that everyone's not perfect,
+But with you by my side, I can't say that life isn't perfect💙
+Sure there are some bad days, but that's what makes you perfect🤍
+Because you stayed💚
+But what about me?
+I'm just an ordinary boy who came into your life🤍
+But somehow, I hope to stay in your heart forever, making every moment sweeter,
+making sure you have someone you can always lay onto🤍
+
+Will You Be My Valentines Qyss?💚
+
+
+
+
+</p>
+</div>
+<button onclick="showPage(1)">I WANNA SEE AGAINN 💕</button>
+</div>
+
+<script>
+function showPage(pageNumber){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById('page'+pageNumber).classList.add('active');
+}
+
+const heartsContainer=document.querySelector('.hearts');
+for(let i=0;i<60;i++){
+let heart=document.createElement('span');
+heart.style.left=Math.random()*100+'vw';
+heart.style.animationDuration=(5+Math.random()*5)+'s';
+heartsContainer.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
